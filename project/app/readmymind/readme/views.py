@@ -26,9 +26,6 @@ class AttributesList(APIView):
 
         return Response({'attributes': serializer.data})
 
-    def post(self, request):
-        pass
-
 
 class PlacesSelection(APIView):
 
@@ -63,22 +60,11 @@ class PlacesSelection(APIView):
 
         print(place_ids)
 
-
         # defining clause for maintaining the order from places(most to less applicable)
         clauses = ' '.join(['WHEN id=%s THEN %s' % (id, i) for i, id in enumerate(place_ids)]).replace(',', '')
         order = 'CASE %s END' % clauses
 
-        print(order)
-        # filtering queryset based on returned keywords
-        #places = Places.objects.filter(id__in=place_ids).extra(select={'order': order}, order_by='order')
-
         places = Places.objects.filter(id__in=place_ids)
-
-        #keywords = self.request.query_params.get('keywords', '').split(',')
-
-        #places = Places.objects.filter(id__in=keywords)
-
-        #print(places)
 
         serializer = PlaceSerializer(places, many=True)
 
