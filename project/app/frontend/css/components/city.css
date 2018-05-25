@@ -1,0 +1,85 @@
+@import url("animation.css");
+
+
+#page2{
+    display:none;
+    margin-top: 10%;
+}
+
+.city-all {
+    margin-top:30px;
+    display: grid;
+    grid-template-columns: repeate(3, 1fr);
+    grid-gap: 15px;
+    grid-auto-rows: minmax(150px, auto);
+    text-align: center;
+}
+
+.cities {
+    text-align: center;
+    vertical-align: center;
+    position: relative;
+}
+
+.city-name {
+    position:absolute;
+    left: 10px;
+    bottom: 15px;
+    color: white;
+
+}
+.city1 {
+    background: linear-gradient(10deg, rgba(30,30,30,0.8) 10%, rgba(46,46,46,0.4) 70%), url("https://source.unsplash.com/1600x900/?random,berlin,city"); 
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    grid-column: 1/2;
+    grid-row: 1;
+}
+
+.city2 {
+    background: linear-gradient(10deg, rgba(30,30,30,0.8) 10%, rgba(46,46,46,0.4) 70%), url("https://source.unsplash.com/1600x900/?random,amsterdam,city"); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: 2/4;
+    grid-row: 1/3;
+}
+
+.city3{
+    background: linear-gradient(10deg, rgba(30,30,30,0.8) 10%, rgba(46,46,46,0.4) 70%), url("https://source.unsplash.com/1600x900/?random,city,budapest"); 
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    grid-column: 1;
+    grid-row: 2/5;
+}
+
+.city4 {
+    background: linear-gradient(10deg, rgba(30,30,30,0.8) 10%, rgba(46,46,46,0.4) 70%), url("https://source.unsplash.com/1600x900/?random,city,sofia"); 
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    grid-column: 2;
+    grid-row: 3;
+}
+.city5 {
+    background: linear-gradient(10deg, rgba(30,30,30,0.8) 10%, rgba(46,46,46,0.4) 70%), url("https://source.unsplash.com/1600x900/?random,city,warschau"); 
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    grid-column: 3;
+    grid-row: 3;
+}
+.city6 {
+    background: linear-gradient(10deg, rgba(30,30,30,0.8) 10%, rgba(46,46,46,0.4) 70%), url("https://source.unsplash.com/400/300/?random,city"); 
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    grid-column: 2/4;
+    grid-row: 4;
+}
+
+.cities:hover {
+    animation: pulselow 1s;
+}
+

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello Handlebars</title>
+    <link href="css/style.css" rel="stylesheet"/>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="js/handlebars-v4.0.11.js"></script>
+    <script src="js/readme.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJWHS43Q7zmMNUzD8y-lRRPEKrmQwp_34"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <main class="wrapper">
+         <!--HEADER-->
+         <div class="header">
+            <h1>read my mind</h1>
+        </div>
+
+        <!--attributes page 1-->
+        <section class="page">
+            <div class="attribute-all"></div>
+            <button id="explore">explore</button>
+        </section>
+
+
+        <!--places page 2-->
+        <section class="page" id="page2">
+            <h2 id="cityselection">Destinations</h2>
+
+            <!--overlay where individuelll places for city are displayed-->
+            <div id="myOverlay" class="overlay">
+                <a href="javascript:void(0)" class="closebtn">&times;</a>
+                <section id="cityLocations">
+                    <div id="map"></div>
+                    <div class="overlay-content"></div>
+                </section>
+
+            </div>
+
+            <!--all cities rendered template-->
+            <div class="city-all"><div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+
+    <!-- HANDELBARS TEMPLATES-->
+
+    <!--____________________template attributes-->
+    <script id="attributes-template" type="text/x-handlebars-template">
+        {{#each attributes}}
+         <div class="attribute {{cycle @index 'one' 'two' 'three' 'four' 'five' 'six'}}" id="{{this.id}}">
+             <span class="attribute-name">{{this.name}}</span>
+         </div>
+        {{/each}}
+     </script>
+
+    <!--______________________template city-->
+     <script id="city-template" type="text/x-handlebars-template">
+            {{#each city}}
+            <div class="cities {{cycle @index 'city1' 'city2' 'city3' 'city4' 'city5' 'city6'}}" id="{{this}}">
+                <span class="city-name">{{this}}</span>
+                <div id="city-places"></div>
+            </div>
+            {{/each}}
+
+    </script>
+
+    <!--___________________template place detailes-->
+    <script id="places-template" type="text/x-handlebars-template">
+
+        <div class="content">
+            {{#each places}}
+            <div class="place">
+                <p class="place_index">{{math @index "+" 1}}</p>
+                <h3 class="place-name">{{this.name}}</h3>
+                <p class="place-address">{{this.address}}</p>
+                <p class="place-rating">rating: {{this.rating}}</p>
+                <a href="{{this.website}}" target="_blank" class="place-website">website</a>
+            </div>
+            {{/each}}
+
+        </div>
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,146 @@
+/* --- Google Fonts --- */
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Montserrat:400,700");
+
+/* --- Components design --- */
+@import url("components/attributes.css");
+@import url("components/city.css");
+@import url("components/places.css");
+@import url("components/animation.css");
+
+/* body */
+*{
+    margin:0px;
+    border:0px;
+    padding:0px;
+    font-family:sans-serif;
+    font-weight: 100;
+    
+}
+
+html, body{
+    clear: both;
+    min-height: 100%;
+
+}
+
+
+.wrapper {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow:auto;
+    margin-bottom: 50px;
+
+}
+
+.page {
+    min-height: 100%;
+    margin-top:8%;
+}
+
+.header {
+    position: fixed;
+    background-color: white;
+    top: 35px;
+    z-index: 1;
+}
+
+
+/*ecxplore button*/
+#explore{
+    display:block;
+    width: 20%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:50px;
+    height: 40px;
+    color: black;
+    font-size: 1em;
+    padding:10px;
+    border: 2px solid blue;
+    border-radius: 5px;
+}
+
+#explore:hover {
+    color:white;
+    background-color: blue;
+    animation: pulse 1s;
+    outline: none;
+}
+
+#explore:focus{
+    outline: none;
+
+}
+
+
+
+
+
+
+
+
+
+/*
+
+.circle{
+    color:black;
+    border: 2px solid blue;
+    width: 140px;
+    height: 140px;
+    background: transparent;
+    -moz-border-radius: 80px;
+    -webkit-border-radius: 80px;
+    border-radius: 80px;
+    margin: 10px;
+    float: left;
+}
+
+.circle2 {
+    border: 2px solid blue;
+    width: 100px;
+    height: 100px;
+    background: transparent;
+    -moz-border-radius: 60px;
+    -webkit-border-radius: 60px;
+    border-radius: 60px;
+    float: right;
+}
+
+.circle3 {
+    border: 2px solid blue;
+    width: 120px;
+    height: 120px;
+    background: transparent;
+    -moz-border-radius: 70px;
+    -webkit-border-radius: 70px;
+    border-radius: 70px;
+    float: right;
+
+}
+
+.circle4 {
+    border: 2px solid blue;
+    width: 90px;
+    height: 90px;
+    background: transparent;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    float: left;
+
+}
+
+.circle5 {
+    border: 2px solid blue;
+    width: 150px;
+    height: 150px;
+    background: transparent;
+    -moz-border-radius: 90px;
+    -webkit-border-radius: 90px;
+    border-radius: 90px;
+    float:right;
+
+}
+*/

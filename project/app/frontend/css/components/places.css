@@ -1,0 +1,110 @@
+/* whole overlay background */
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.8);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+/*close button */
+.closebtn{
+    color:white;
+    z-index: 1;
+    margin-bottom:10px;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 0px;
+    right: 15px;
+    font-size: 1.5em;
+}
+
+/*close button */
+
+@media screen and (max-height: 450px) {
+  .overlay .closebtn {
+    font-size: 1em;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+/* div with content and map */
+#cityLocations {
+    position:relative;
+    height:90%;
+    width: 90%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 5%;
+    margin-bottom: 50px;
+    background-color:lightgray;
+    padding-top: 8px;
+    padding-left: 8px;
+    
+}
+
+/* map */
+#map {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 100%;
+    width: 100%;   
+}
+
+/* div with places content */
+.content {
+    position: relative;
+    width: 25%;
+    margin-top: 40px;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.overlay-content {
+    overflow-y:scroll;
+    height: 100%;
+}
+
+.place_index{
+    float: left;
+    font-weight: 400;
+    margin-right: 5px;
+    font-size: 0.8em;
+}
+.place-name {
+    font-weight: 400;
+    margin-bottom: 8px;
+    font-size: 0.8em;
+    color: rgb(61, 61, 61);
+}
+
+.place-website, .place-address, .place-rating {
+    text-decoration: none;
+    font-size: 0.7em;
+    color: rgb(124, 124, 124);
+}
+
+.place-website:hover {
+    color:blue;
+    cursor: pointer;
+}
+/*div for each place */
+.place{
+    margin-top: 8px;
+    z-index: 4;
+    background-color:rgb(253, 254, 255) ;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+
