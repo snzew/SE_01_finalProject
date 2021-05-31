@@ -1,5 +1,4 @@
-# SE_01_finalProject
-final project for SE_01 module standard assessment
+# readMyMind
 
 Hi, 
 
